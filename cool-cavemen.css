@@ -1,0 +1,636 @@
+/*
+ Author Name : Kevin Deldycke
+ Author Site : http://kevin.deldycke.com
+ Style Name  : Cool Cavemen
+ Style URI   : http://coolcavemen.com/wp-content/themes/k2/styles/cool-cavemen
+ Version     : 1.1
+ Comments    : This style is designed for K2 1.0-RC8 theme.
+ Copyright   : Kevin Deldycke
+ Licence     : Proprietary
+*/
+
+
+/* ====================================================
+**  Theme main code
+** ====================================================
+*/
+
+body {
+ background: #be9e71 url('background.jpg') top center repeat-x;
+ min-width: 928px; /* Should be the same as the biggest width difined in .imgwrapper */
+}
+
+
+/* Main font color */
+body,
+h1, h1 a, h1 a:visited,
+h2, h2 a, h2 a:visited, h2 a:hover, h2 span,
+h3, h3 a, h3 a:visited, h3 a:hover,
+h4, h4 a, h4 a:visited,
+h5, h5 a, h5 a:visited,
+h6, h6 a, h6 a:visited,
+.entry-content,
+input[type=text], textarea,
+blockquote {
+ font-family: "Calibri", "Helvetica", "Verdana", "Arial", sans-serif;
+ color: #333 !important;
+ clear: both;
+}
+
+h1, h2, h3, h4, h5, h6 {text-align: left}
+h2 {font-size: 4em}
+h3 {font-size: 3em}
+h2, h3 {letter-spacing: 1px}
+h4 {font-weight: bold; letter-spacing: 0}
+
+a {color: #e52f17}
+
+/* Code blockquote styling */
+blockquote {
+ font-style: italic;
+ text-align: left;
+}
+blockquote code {
+ font-style: normal;
+ background-color: #f6f6f6;
+ background-image: none;
+ border-width: 1px 1px 1px 3px;
+ border-color: #ccc;
+ border-style: dotted dotted dotted solid;
+ padding: .7em 1em;
+ display: block;
+}
+
+
+/* Hack from http://james.gameover.com/index.php/2005/on-horisontal-css-centering-using-absolute-positioning */
+.imgwrapperwrapper {
+ /* Fix for IE */
+ text-align: center;
+}
+.imgwrapper {
+ position: relative;
+ text-align: left;
+ margin: 0 auto;
+ width: 928px; /* Size of default header.jpg */
+}
+.imgwrapper #band {
+ display: block;
+ position: absolute;
+ top: 0;
+}
+
+
+#page {
+ background: transparent;
+ padding-top: 0;
+ border: 0;
+}
+
+
+/* Style header */
+#header {
+ background: transparent;
+ height: 180px;
+}
+.home #header {
+ height: 402px;
+}
+
+/* Hide default title and description */
+.blog-title,
+#header .description {
+ display: none;
+}
+
+/* Header buttons layout */
+#header ul.topbuttons {
+ list-style: none;
+ position: absolute;
+ left: 200px;
+ bottom: 71px;
+}
+.home #header ul.topbuttons {
+ bottom: 90px;
+}
+#header ul.topbuttons li {
+ padding: 4px 0 0;
+}
+
+/* Header buttons fade in/out jquery effects */
+/* TODO: genericize with #partners */
+.topbuttons a,
+.topbuttons a .hover {
+ height: 30px;
+ position: relative;
+ display: block;
+ background: transparent url('buttons.png') top left no-repeat;
+ /* Hide all text. Inspiration from http://www.alistapart.com/articles/sprites2/ */
+ text-indent: -9000px;
+ overflow: hidden;
+ z-index: 10;
+ /* My hack ! :) */
+ font-size: 0;
+ line-height: 0;
+}
+
+.topbuttons a.play {width: 76px; background-position:   0   0}
+.topbuttons a.buy  {width: 76px; background-position: -76px 0}
+.topbuttons .highlight a.play:hover, .topbuttons a.play .hover {background-position:   0   -30px}
+.topbuttons .highlight a.buy:hover , .topbuttons a.buy  .hover {background-position: -76px -30px}
+
+
+/* Style for buy buttons located in discographia */
+table.tracklist tbody tr td.buy a,
+#primary .entry-content a.buy {
+ display: block;
+ background: transparent url('buttons.png') top left no-repeat;
+ height: 30px;
+ width: 76px;
+}
+table.tracklist tbody tr td.buy a      , #primary .entry-content a.buy       {background-position: -76px   0}
+table.tracklist tbody tr td.buy a:hover, #primary .entry-content a.buy:hover {background-position: -76px -30px}
+table.tracklist tbody tr td.buy a span , #primary .entry-content a.buy span  {display: none}
+#primary .entry-content a.buy {float: left} /* Layout hack for stand-alone buy button */
+
+
+/* Tabs style */
+ul.menu {
+ /* Make tabs full-width */
+ width: 100%;
+ margin: 0;
+}
+
+ul.menu li {
+}
+
+/* Style graphic tabs */
+ul.menu li.blogtab       a,
+ul.menu li.page-item-3   a,
+ul.menu li.page-item-28  a,
+ul.menu li.page-item-47  a,
+ul.menu li.page-item-205 a,
+ul.menu li.page-item-526 a {
+ display: block;
+ float: left;
+ background-repeat: no-repeat;
+ background-position: top left;
+ height: 50px;
+ padding: 0;
+ /* Hide all text. Inspired by http://www.alistapart.com/articles/sprites2/ */
+ text-indent: -9000px;
+ overflow: hidden;
+ z-index: 10;
+ /* My hack ! :) */
+ font-size: 0;
+ line-height: 0;
+}
+ul.menu li a,
+ul.menu li a:hover,
+ul.menu li.current_page_item a,
+ul.menu li.current_page_item a:hover,
+ul.menu li.current_page_ancestor a,
+ul.menu li.current_page_ancestor a:hover {
+ background-color: transparent;
+ background-image: url('tabs.orig.png');
+}
+ul.menu li.blogtab       a {width: 110px; background-position:    0   0}
+ul.menu li.page-item-3   a {width:  98px; background-position: -110px 0}
+ul.menu li.page-item-47  a {width:  84px; background-position: -208px 0}
+ul.menu li.page-item-205 a {width:  97px; background-position: -292px 0}
+ul.menu li.page-item-28  a {width:  94px; background-position: -389px 0}
+ul.menu li.page-item-526 a {width:  87px; background-position: -483px 0}
+ul.menu li.blogtab       a:hover {background-position:    0   -50px}
+ul.menu li.page-item-3   a:hover {background-position: -110px -50px}
+ul.menu li.page-item-47  a:hover {background-position: -208px -50px}
+ul.menu li.page-item-205 a:hover {background-position: -292px -50px}
+ul.menu li.page-item-28  a:hover {background-position: -389px -50px}
+ul.menu li.page-item-526 a:hover {background-position: -483px -50px}
+ul.menu li.current_page_item.blogtab       a {background-position:    0   -100px}
+ul.menu li.current_page_item.page-item-3   a {background-position: -110px -100px}
+ul.menu li.current_page_item.page-item-47  a {background-position: -208px -100px}
+ul.menu li.current_page_item.page-item-205 a {background-position: -292px -100px}
+ul.menu li.current_page_item.page-item-28  a {background-position: -389px -100px}
+ul.menu li.current_page_item.page-item-526 a {background-position: -483px -100px}
+ul.menu li.current_page_item.blogtab       a:hover {background-position:    0   -150px}
+ul.menu li.current_page_item.page-item-3   a:hover {background-position: -110px -150px}
+ul.menu li.current_page_item.page-item-47  a:hover {background-position: -208px -150px}
+ul.menu li.current_page_item.page-item-205 a:hover {background-position: -292px -150px}
+ul.menu li.current_page_item.page-item-28  a:hover {background-position: -389px -150px}
+ul.menu li.current_page_item.page-item-526 a:hover {background-position: -483px -150px}
+
+/* Custom "pro" tabs style looks like default K2's tabs, but are right-aligned */
+ul.menu li.page-item-364 a,
+ul.menu li.page-item-32 a {
+ background: #bbb;
+ padding: 5px 10px 6px;
+ color: #333;
+ font-weight: bold;
+}
+ul.menu li.page-item-32,
+ul.menu li.page-item-364 {
+ position: absolute;
+ bottom: 0;
+}
+ul.menu li.page-item-32  {right: 0}
+ul.menu li.page-item-364 {right: 10%} /* Dangerous as not pixel-perfect, but works... */
+ul.menu li.page-item-32  a:hover,
+ul.menu li.page-item-364 a:hover,
+ul.menu li.current_page_item.page-item-32  a:hover,
+ul.menu li.current_page_item.page-item-364 a:hover {
+ background: #999;
+}
+ul.menu li.current_page_item.page-item-32  a,
+ul.menu li.current_page_item.page-item-364 a {
+ background: #d5d9e5;
+}
+
+/* Keep admin tab on the right */
+ul.menu li.admintab {
+ position: fixed;
+ top: 20px;
+ right: 20px;
+}
+
+/* Common styles of admin buttons and admin tab */
+ul.menu li.admintab a {
+ background-image: none;
+}
+ul.menu li.admintab a,
+a.post-edit-link {
+ background-color: #d54e21;
+ color: #eee;
+ font-weight: bold;
+ -khtml-border-radius: 4px;
+ -o-border-radius: 4px;
+ -moz-border-radius: 4px;
+ -webkit-border-radius: 4px;
+ border-radius: 4px;
+}
+ul.menu li.admintab a:hover,
+a.post-edit-link:hover {
+ background-color: #f9210b;
+ color: #fff;
+}
+
+
+/* Set main content background color to white */
+.content {
+ background: #ddd url('footer-background-001.jpg') bottom left no-repeat;
+ padding-bottom: 40px;
+}
+
+/* Change color for "pro" tabs */
+.pageid-364 .content,
+.pageid-32 .content {
+ background-color: #d5d9e5;
+ background-image: url('footer-background-002.jpg');
+}
+
+/* Hide tags on first page */
+body.home .entry-tags {
+ display: none;
+}
+
+/* Force meta data at the foot of each news to clear the box floating model.
+** Use case: http://coolcavemen.com/2008/festival-musikampus-a-bethune-avec-swing-gadje/
+*/
+.entry-foot {
+ clear: both;
+}
+
+/* Footer style */
+#footer {
+ background: transparent;
+ width: 720px;
+ padding: 0 30px 30px;
+}
+#footer,
+#footer h4 {
+ color: #d3ba97 !important;
+}
+#footer h4 {
+ font-size: 1.3em;
+ text-align: center;
+ margin-top: 1.4em; /* Same as "#footer .centeringwrapper margin-bottom" */
+}
+#footer a {
+ color: #eee;
+ border: none;
+}
+#footer a:hover {
+ color: #fff;
+ text-decoration: underline;
+}
+#footer .footerstyledwith,
+#footer .footerpoweredby,
+#footer .footerstats {
+ display: none;
+}
+#footer .footerfeedlinks a {
+ background: transparent url('../../images/feed.png') right center no-repeat;
+ height: 16px;
+ padding-right: 18px;
+}
+
+/* Partner's icons layout: centered with consistent spacing */
+#footer .centeringwrapper {
+ float: left;
+ width: 100%;
+ overflow: hidden;
+ position: relative;
+ margin-bottom: 1.4em; /* Same as "#footer h4 margin-top" */
+}
+#footer .centeringwrapper ul {
+ clear: left;
+ float: left;
+ position: relative;
+ left: 50%;
+}
+#footer .centeringwrapper li {
+ display: block;
+ float: left;
+ list-style: none;
+ position: relative;
+ right: 50%;
+ margin: 5px 10px;
+}
+
+/* Partner's icons fade in/out jquery effects */
+#partners a,
+#partners a .hover {
+ height: 37px;
+ position: relative;
+ display: block;
+ background: transparent url('partners.png') 0 0 no-repeat;
+ /* Hide all text. Inspiration from http://www.alistapart.com/articles/sprites2/ */
+ text-indent: -9000px;
+ overflow: hidden;
+ z-index: 10;
+ /* My hack ! :) */
+ font-size: 0;
+ line-height: 0;
+}
+#partners a.gofannon   {width:  94px; background-position:    0   -37px}
+#partners a.lichti     {width:  32px; background-position:  -94px -37px}
+#partners a.commlenvol {width:  85px; background-position: -126px -37px}
+#partners a.kde        {width:  36px; background-position: -211px -37px}
+#partners a.thomann    {width: 100px; background-position: -247px -37px}
+#partners .highlight a.gofannon:hover  , #partners a.gofannon   .hover {background-position:    0   0}
+#partners .highlight a.lichti:hover    , #partners a.lichti     .hover {background-position:  -94px 0}
+#partners .highlight a.commlenvol:hover, #partners a.commlenvol .hover {background-position: -126px 0}
+#partners .highlight a.kde:hover       , #partners a.kde        .hover {background-position: -211px 0}
+#partners .highlight a.thomann:hover   , #partners a.thomann    .hover {background-position: -247px 0}
+
+
+/* Tracklist tables
+** Original designed by by Mihalcea Romeo - www.roscripts.com
+** Additional modification by Kevin Deldycke
+----------------------------------------------- */
+#primary .entry-content table.tracklist {
+ border-collapse: collapse;
+ border-left: 1px solid #686868;
+ border-right: 1px solid #686868;
+ text-align: left;
+ width: 100%;
+}
+#primary .entry-content .tracklist img {
+ border: 0;
+ padding: 0;
+ margin: 0;
+}
+.tracklist td, .tracklist th {
+ padding: 0 5px;
+}
+.tracklist caption {
+ font-weight: bold;
+ text-align: left;
+}
+
+/* links & cells */
+.tracklist a {
+ display: block;
+ text-align: left;
+ padding: 0 5px;
+}
+.tracklist a:hover {
+ background: #eee;
+}
+.tracklist .number,
+.tracklist .time {
+ text-align: right;
+}
+#primary .entry-content .tracklist tbody tr td.play,
+#primary .entry-content .tracklist tbody tr td.buy {
+ padding-top: 2px;
+ padding-bottom: 2px;
+}
+.tracklist td.title {
+}
+.tracklist .download,
+.tracklist .play,
+.tracklist .buy {
+ text-align: center;
+}
+
+/* head & foot */
+.tracklist thead th, .tracklist tfoot th, .tracklist tfoot td {
+ background: #515151 url(table-header-background.png) repeat-x;
+ color: #ccc;
+}
+
+/* body */
+.tracklist tbody {
+ background: #e6f1fd url(table-body-background.png) repeat-x;
+}
+.tracklist tbody th, .tracklist tbody td {
+ border-bottom: dotted 1px #333;
+}
+.tracklist tbody th a {
+ color: #333;
+}
+.tracklist tbody tr:hover {
+ background: #fafafa
+}
+.tracklist tbody td.title .details {
+ font-size: .9em;
+ font-weight: normal;
+ line-height: normal;
+}
+
+
+/* Lyrics blockquote styling */
+blockquote.lyrics {
+ font-family: Cambria, "Chaparral Pro", "Warnock Pro", "Hoefler Text", "Palatino Linotype", Palatino, "News Gothic MT", "Trebuchet MS", serif;
+ font-style: normal;
+ font-size: 1.1em;
+}
+
+
+/* Internal link icons */
+#page .entry-content a[href *="/discography/"],
+#page .entry-content a[href *="/discography/songs-and-lyrics/"] {
+ background: none center left no-repeat;
+ -khtml-background-clip: no-clip;
+ -o-background-clip: no-clip;
+ -moz-background-clip: no-clip;
+ -webkit-background-clip: no-clip;
+ background-clip: no-clip;
+}
+#page .entry-content a[href *="/discography/"] {
+ background-image: url(cd-go.png);
+ padding-left: 18px;
+}
+#page .entry-content a[href *="/discography/songs-and-lyrics/"] {
+ background-image: url(document.png);
+ padding-left: 12px;
+}
+/* Reset cd icon image on biography */
+.page-slug-biography #page .entry-content a {
+ background-image: none;
+ padding-left: 0;
+}
+
+
+/* Add nice white border and shadow to images */
+
+#page .entry-content a img {
+ background-color: white;
+ padding: 5px;
+ border-right: 1px solid #ddd;
+ border-bottom: 1px solid #ddd;
+}
+
+#page .entry-content a:hover img {
+ background-color: #5794de;
+}
+
+
+/* Generic style for coolcavethumbs lists */
+
+.entry-content ul.coolcavethumbs {
+ list-style-type: none;
+ padding-left: 0;
+ float: right; /* Tips by: http://orderedlist.com/articles/clearing-floats-the-fne-method */
+}
+
+ /* Reset cd icon image */
+#page .entry-content ul.coolcavethumbs a {
+ background-image: none;
+ padding-left: 0;
+}
+#page .entry-content ul.coolcavethumbs a:hover {
+ text-decoration: none;
+}
+#page .entry-content ul.coolcavethumbs a img {
+ padding-bottom: 0;
+ border-bottom: none;
+}
+
+.entry-content ul.coolcavethumbs li {
+ float: left;
+ margin: 0 5px 20px 0;
+ line-height: 0;
+}
+
+.entry-content ul.coolcavethumbs li span {
+ display: block;
+ width: 150px;
+ background: white;
+ border-right: 1px solid #ddd;
+ border-bottom: 1px solid #ddd;
+ padding: 1em 5px;
+ text-align: center;
+ line-height: 1.3em;
+}
+
+.entry-content ul.coolcavethumbs li a:hover span {
+ background-color: #5794de;
+ color: white;
+}
+
+
+/* Double search box bottom margin to fix an overflowed "OK" button when the browser use a custom widget. Looks like a browser bug...
+*/
+#searchform {
+ margin-bottom: 40px;
+}
+
+/* Separate top and bottom navigation using a light dotted line */
+#nav-above, #nav-below {
+ border: 0 dotted #ccc;
+ padding: 6px 0;
+}
+#nav-above {border-bottom-width: 1px}
+#nav-below {border-top-width: 1px}
+
+
+/* ====================================================
+** Comments styling
+** ====================================================
+*/
+
+/* Hide comment generic text but keep the "leave a comment" call to action vsible */
+.comments h4       {display: none}
+.comments h4.reply {display: inline}
+
+/* All registered users are members of the band. Style their comment box differently. */
+.byuser,
+.bypostauthor {
+ background-color: #eee;
+ -khtml-border-radius: 5px;
+ -o-border-radius: 5px;
+ -moz-border-radius: 5px;
+ -webkit-border-radius: 5px;
+ border-radius: 5px;
+}
+
+/* Style comment form to make input fields thicker and flat (easier to spot) */
+.comments input[type='text'], textarea#comment {
+ border: 2px solid #ccc;
+}
+
+.subscribe-to-comments {
+ float: left;
+ padding-left: 20px;
+ background: url(email.png) no-repeat left center;
+ margin-left: 7px;
+}
+
+/* Display all pingbacks in a single box.
+** Inspired by True Blue v1.4 theme: http://stevelam.org/2007/03/true-blue-14/
+** TODO: put it in a hidden tab or a drop down menu
+*/
+.comments #pinglist {
+ background: #e4e9ef;
+ border-width: 3px 1px 1px;
+ border-color: #d2d7dd;
+ border-style: solid;
+}
+
+
+/* ====================================================
+**  K2 bug fixes: should be commited in K2 trunk but
+**  i'm too lazy yet to submit a bug report...
+** ====================================================
+*/
+
+/* I don't want to force vertical scrollbar ! It makes konqueror buggy */
+html {
+ overflow-y: inherit;
+ height: inherit;
+ margin-bottom: inherit;
+}
+
+/* Clear left aligned images to fix the "cascaded" image alignements.
+** Use case: http://coolcavemen.com/2008/pont-a-rockmasnya-et-a-labattoir/
+*/
+img.alignleft, img[align="left"] {
+ clear: left;
+}
+
+/* List styles were aparently reseted in K2 1.0RC6. Here is a fix.
+** Use case: http://coolcavemen.com/2008/nouvelle-version-du-site/
+*/
+ol, ul {
+ list-style-type: disc;
+}

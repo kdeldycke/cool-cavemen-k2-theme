@@ -3,7 +3,7 @@
  Author Site : http://kevin.deldycke.com
  Style Name  : Cool Cavemen
  Style URI   : http://coolcavemen.com/wp-content/themes/k2/styles/cool-cavemen
- Version     : 1.1
+ Version     : 1.3.dev
  Comments    : This style is designed for K2 1.0-RC8 theme.
  Copyright   : Kevin Deldycke
  Licence     : Proprietary
@@ -37,7 +37,7 @@ blockquote {
  clear: both;
 }
 
-h1, h2, h3, h4, h5, h6 {text-align: left}
+h1, h2, h3, h4, h5, h6, body.page .entry-title {text-align: left}
 h2 {font-size: 4em}
 h3 {font-size: 3em}
 h2, h3 {letter-spacing: 1px}
@@ -380,6 +380,16 @@ body.home .entry-tags {
 #partners .highlight a.commlenvol:hover, #partners a.commlenvol .hover {background-position: -126px 0}
 #partners .highlight a.kde:hover       , #partners a.kde        .hover {background-position: -211px 0}
 #partners .highlight a.thomann:hover   , #partners a.thomann    .hover {background-position: -247px 0}
+
+
+/* Custom style for biography
+** TODO !!!
+*/
+.entry-head {
+}
+
+.entry-content {
+}
 
 
 /* Tracklist tables

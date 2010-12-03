@@ -184,39 +184,48 @@ ul.menu li.page-item-526 a {
  font-size: 0;
  line-height: 0;
 }
-ul.menu li a,
-ul.menu li a:hover,
-ul.menu li.current_page_item a,
-ul.menu li.current_page_item a:hover,
-ul.menu li.current_page_ancestor a,
-ul.menu li.current_page_ancestor a:hover {
+            ul.menu li a,
+            ul.menu li a:hover,
+            ul.menu li.blogtab a,
+            ul.menu li.blogtab a:hover,
+body.single ul.menu li.blogtab a,
+body.single ul.menu li.blogtab a:hover,
+            ul.menu li.current_page_item a,
+            ul.menu li.current_page_item a:hover,
+            ul.menu li.current_page_ancestor a,
+            ul.menu li.current_page_ancestor a:hover {
  background-color: transparent;
  background-image: url('tabs.orig.png');
 }
-ul.menu li.blogtab       a {width: 110px; background-position:    0   0}
-ul.menu li.page-item-3   a {width:  98px; background-position: -110px 0}
-ul.menu li.page-item-47  a {width:  84px; background-position: -208px 0}
-ul.menu li.page-item-205 a {width:  97px; background-position: -292px 0}
-ul.menu li.page-item-28  a {width:  94px; background-position: -389px 0}
-ul.menu li.page-item-526 a {width:  87px; background-position: -483px 0}
-ul.menu li.blogtab       a:hover {background-position:    0   -50px}
-ul.menu li.page-item-3   a:hover {background-position: -110px -50px}
-ul.menu li.page-item-47  a:hover {background-position: -208px -50px}
-ul.menu li.page-item-205 a:hover {background-position: -292px -50px}
-ul.menu li.page-item-28  a:hover {background-position: -389px -50px}
-ul.menu li.page-item-526 a:hover {background-position: -483px -50px}
-ul.menu li.current_page_item.blogtab       a {background-position:    0   -100px}
-ul.menu li.current_page_item.page-item-3   a {background-position: -110px -100px}
-ul.menu li.current_page_item.page-item-47  a {background-position: -208px -100px}
-ul.menu li.current_page_item.page-item-205 a {background-position: -292px -100px}
-ul.menu li.current_page_item.page-item-28  a {background-position: -389px -100px}
-ul.menu li.current_page_item.page-item-526 a {background-position: -483px -100px}
-ul.menu li.current_page_item.blogtab       a:hover {background-position:    0   -150px}
-ul.menu li.current_page_item.page-item-3   a:hover {background-position: -110px -150px}
-ul.menu li.current_page_item.page-item-47  a:hover {background-position: -208px -150px}
-ul.menu li.current_page_item.page-item-205 a:hover {background-position: -292px -150px}
-ul.menu li.current_page_item.page-item-28  a:hover {background-position: -389px -150px}
-ul.menu li.current_page_item.page-item-526 a:hover {background-position: -483px -150px}
+body.single ul.menu li.blogtab       a,
+            ul.menu li.blogtab       a {width: 110px; background-position:    0   0}
+            ul.menu li.page-item-3   a {width:  98px; background-position: -110px 0}
+            ul.menu li.page-item-47  a {width:  84px; background-position: -208px 0}
+            ul.menu li.page-item-205 a {width:  97px; background-position: -292px 0}
+            ul.menu li.page-item-28  a {width:  94px; background-position: -389px 0}
+            ul.menu li.page-item-526 a {width:  87px; background-position: -483px 0}
+body.single ul.menu li.blogtab       a:hover,
+            ul.menu li.blogtab       a:hover {background-position:    0   -50px}
+            ul.menu li.page-item-3   a:hover {background-position: -110px -50px}
+            ul.menu li.page-item-47  a:hover {background-position: -208px -50px}
+            ul.menu li.page-item-205 a:hover {background-position: -292px -50px}
+            ul.menu li.page-item-28  a:hover {background-position: -389px -50px}
+            ul.menu li.page-item-526 a:hover {background-position: -483px -50px}
+body.single ul.menu li.current_page_item.blogtab       a,
+            ul.menu li.current_page_item.blogtab       a {background-position:    0   -100px}
+            ul.menu li.current_page_item.page-item-3   a {background-position: -110px -100px}
+            ul.menu li.current_page_item.page-item-47  a {background-position: -208px -100px}
+            ul.menu li.current_page_item.page-item-205 a {background-position: -292px -100px}
+            ul.menu li.current_page_item.page-item-28  a {background-position: -389px -100px}
+            ul.menu li.current_page_item.page-item-526 a {background-position: -483px -100px}
+
+body.single ul.menu li.current_page_item.blogtab       a:hover,
+            ul.menu li.current_page_item.blogtab       a:hover {background-position:    0   -150px}
+            ul.menu li.current_page_item.page-item-3   a:hover {background-position: -110px -150px}
+            ul.menu li.current_page_item.page-item-47  a:hover {background-position: -208px -150px}
+            ul.menu li.current_page_item.page-item-205 a:hover {background-position: -292px -150px}
+            ul.menu li.current_page_item.page-item-28  a:hover {background-position: -389px -150px}
+            ul.menu li.current_page_item.page-item-526 a:hover {background-position: -483px -150px}
 
 /* Custom "pro" tabs style looks like default K2's tabs, but are right-aligned */
 ul.menu li.page-item-364 a,

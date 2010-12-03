@@ -19,6 +19,14 @@ function additional_css() {
 function additional_js() {
   ?>
   <script type='text/javascript' src='/wp-content/themes/k2/styles/cool-cavemen/cufon-yui.js'></script>
+  <!--
+    Coffee Service font javascript is compiled on http://cufon.shoqolate.com/generate/ with the following parameters:
+      * Glyphs included: Uppercase, Lowercase, Numerals, Punctuation, WordPress punctuation, Basic Latin & Latin-1 Supplement.
+      * Usage limitied to coolcavemen.com domain.
+      * Font scaled to 360 units per em (default value).
+      * Path optimization: 2 units (default value).
+      * Included kerning tables (default value).
+  -->
   <script type='text/javascript' src='/wp-content/themes/k2/styles/cool-cavemen/Coffee_Service_400.font.js'></script>
   <script type="text/javascript">
     Cufon.replace('h1.entry-title');

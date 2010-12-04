@@ -67,6 +67,12 @@ function additional_js() {
         });
     });
   </script>
+  <script type='text/javascript' src='/wp-content/themes/k2/styles/cool-cavemen/jquery.popupwindow.js'></script>
+  <script type="text/javascript">
+    jQuery(function(){
+      jQuery(".musicplayer").popupwindow({height:576,width:111,toolbar:0,scrollbars:0,menubar:0,location:0,status:0,resizable:0,center:1});
+    });
+  </script>
   <?php
 }
 
@@ -75,7 +81,7 @@ function additional_js() {
 function multipolar_announcement() {
   ?>
   <ul class="topbuttons">
-    <li class="highlight"><a class="play" href="http://www.pervade-productions.com/mp3/Cool_cavemen-Fusion.mp3">Play Multipolar !</a></li>
+    <li class="highlight"><a class="play musicplayer" href="http://coolcavemen.com/wp-content/themes/k2/styles/cool-cavemen/music-player.html">Play Multipolar !</a></li>
     <li class="highlight"><a class="buy"  href="http://shop.coolcavemen.com/multipolar-lp">Buy Multipolar !</a></li>
   </ul>
   <?php

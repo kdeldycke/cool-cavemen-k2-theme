@@ -67,7 +67,7 @@ function additional_js() {
         });
     });
   </script>
-  <script type='text/javascript' src='/wp-content/themes/k2/styles/cool-cavemen/jquery.popupwindow.js'></script>
+  <script type='text/javascript' src='/wp-content/themes/k2/styles/cool-cavemen/js-popupwindow/jquery.popupwindow.js'></script>
   <script type="text/javascript">
     jQuery(function(){
       jQuery(".musicplayer").popupwindow();

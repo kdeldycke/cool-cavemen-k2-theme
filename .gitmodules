@@ -1,3 +1,6 @@
 [submodule "js-popupwindow"]
 	path = js-popupwindow
 	url = https://github.com/rip747/popupwindow.git
+[submodule "js-jplayer"]
+	path = js-jplayer
+	url = https://github.com/happyworm/jPlayer.git

@@ -11,7 +11,7 @@ body {
 }
 </style>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
-<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
+<script type="text/javascript" src="js-jplayer/jquery.jplayer/jquery.jplayer.js"></script>
 <script type="text/javascript">
 <!--
 $(document).ready(function(){
@@ -24,6 +24,7 @@ $(document).ready(function(){
 		ready: function () {
 			this.element.jPlayer("setFile", "http://www.pervade-productions.com/mp3/Cool_cavemen-Fusion.mp3").jPlayer("play");
 		},
+                swfPath: "js-jplayer/jquery.jplayer/",
 		volume: 50
 	})
 	.jPlayer("onProgressChange", function(loadPercent, playedPercentRelative, playedPercentAbsolute, playedTime, totalTime) {

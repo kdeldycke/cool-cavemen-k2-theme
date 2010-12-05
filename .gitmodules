@@ -4,3 +4,6 @@
 [submodule "js-jplayer"]
 	path = js-jplayer
 	url = https://github.com/happyworm/jPlayer.git
+[submodule "js-cufon"]
+	path = js-cufon
+	url = https://github.com/sorccu/cufon.git

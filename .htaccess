@@ -1,0 +1,11 @@
+# Disallow viewing of .svn and .git directory contents. See:
+#   * http://news.ycombinator.com/item?id=838981
+#   * http://www.subversionary.org/martintomes/preventing-access-to-svn-folders-in-apache
+RedirectMatch 404 /\.(svn|git)(/|$)
+
+# Disable rendering of PHP files comming with javascript submodules. See:
+#   * https://github.com/kdeldycke/kev-code/commit/abad1c428a070965e1d60a5e825f919dc1770758
+#   * https://github.com/kdeldycke/kev-code/commit/866ed5f4fe0c5d69f0a91d333a10e7fc64724b80
+#   * https://github.com/kdeldycke/kev-code/commit/1453fd5a051c5594cddcae4cc35c4fea5193634c
+RedirectMatch 404 js-(.*)\.php$
+

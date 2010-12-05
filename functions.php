@@ -18,7 +18,7 @@ function additional_css() {
 // This method contain all the addional JavaScript
 function additional_js() {
   ?>
-  <script type='text/javascript' src='/wp-content/themes/k2/styles/cool-cavemen/cufon-yui.js'></script>
+  <script type='text/javascript' src='/wp-content/themes/k2/styles/cool-cavemen/js-cufon/js/cufon.js'></script>
   <!--
     Coffee Service font javascript is compiled on http://cufon.shoqolate.com/generate/ with the following parameters:
       * Glyphs included: Uppercase, Lowercase, Numerals, Punctuation, WordPress punctuation, Basic Latin & Latin-1 Supplement.

@@ -99,7 +99,6 @@ function legal_notice() {
     <ul id="partners">
       <li class="highlight"><a class="gofannon"   href="http://www.gofannon-records.com">Gofannon Records</a></li>
       <li class="highlight"><a class="lichti"     href="http://www.myspace.com/espace_lichti">Lich'ti</a></li>
-      <li class="highlight"><a class="commlenvol" href="http://commlenvol.com">commlenvol</a></li>
       <li class="highlight"><a class="kde"        href="http://kevin.deldycke.com">Kevin Deldycke</a></li>
       <li class="highlight"><a class="thomann"    href="http://www.thomann.de/partner_redirect.html?partner_id=36150">thomann</a></li>
     </ul>

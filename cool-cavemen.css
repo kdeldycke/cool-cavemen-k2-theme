@@ -381,12 +381,10 @@ body.home .entry-tags {
 }
 #partners a.gofannon   {width:  94px; background-position:    0   -37px}
 #partners a.lichti     {width:  32px; background-position:  -94px -37px}
-#partners a.commlenvol {width:  85px; background-position: -126px -37px}
 #partners a.kde        {width:  36px; background-position: -211px -37px}
 #partners a.thomann    {width: 100px; background-position: -247px -37px}
 #partners .highlight a.gofannon:hover  , #partners a.gofannon   .hover {background-position:    0   0}
 #partners .highlight a.lichti:hover    , #partners a.lichti     .hover {background-position:  -94px 0}
-#partners .highlight a.commlenvol:hover, #partners a.commlenvol .hover {background-position: -126px 0}
 #partners .highlight a.kde:hover       , #partners a.kde        .hover {background-position: -211px 0}
 #partners .highlight a.thomann:hover   , #partners a.thomann    .hover {background-position: -247px 0}
 

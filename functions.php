@@ -103,7 +103,7 @@ function legal_notice() {
       <li class="highlight"><a class="thomann"    href="http://www.thomann.de/partner_redirect.html?partner_id=36150">thomann</a></li>
     </ul>
   </div>
-  <p><a href="/biography/about-us/">about us</a> | <a href="/pro/contact/">contacts</a> | <a href="/pro/mentions-legales/">mentions légales</a> | <a href="/news.php">archives: les anciennes news</a> | <a href="/e107_plugins/forum/forum_viewforum.php?3">vieux forum</a></p>
+  <p><a href="/biography/about-us/">about us</a> | <a href="/pro/contact/">contacts</a> | <a href="/pro/mentions-legales/">mentions légales</a> | <a href="/biography/anti-fan-club">Anti-Fan Club</a> | <a href="/e107_plugins/forum/forum_viewforum.php?3">vieux forum</a></p>
   <p>Copyright &copy; 2004~<?php echo date('Y');?> Cool Cavemen</p>
   <?php
 }

@@ -4,8 +4,8 @@
 RedirectMatch 404 /\.(svn|git)(/|$)
 
 # Disable rendering of PHP files comming with javascript submodules. See:
-#   * http://github.com/kdeldycke/cool-cavemen/commit/3a1cfa8d467ebc01adf356e8869351829d442318
-#   * http://github.com/kdeldycke/cool-cavemen/commit/753f4158dd0ca5698d8d54819d6ef93dffc5d5d3
-#   * http://github.com/kdeldycke/cool-cavemen/commit/4b47a931771aeb7c42c1ee61aa0192b34d5a3ef8
+#   * http://github.com/kdeldycke/cool-cavemen-k2-theme/commit/3a1cfa8d467ebc01adf356e8869351829d442318
+#   * http://github.com/kdeldycke/cool-cavemen-k2-theme/commit/753f4158dd0ca5698d8d54819d6ef93dffc5d5d3
+#   * http://github.com/kdeldycke/cool-cavemen-k2-theme/commit/4b47a931771aeb7c42c1ee61aa0192b34d5a3ef8
 RedirectMatch 404 js-(.*)\.php$
 
